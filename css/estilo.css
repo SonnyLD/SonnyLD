@@ -381,7 +381,10 @@ form {
   font-size: 1rem;
   color: rgb(19, 18, 18);
 }
-
+.mapas__img{
+  margin-top: 4em;
+  border-top: 4px solid black;
+}
 /*el formulario se puede mejorar un poco*/
 .formulario {
   display: grid;
@@ -432,9 +435,25 @@ footer {
 @media screen and (max-width: 768px) {
   #gridPagina {
     display: grid;
-    width: 100%;
+    font-size: 12px;
+    grid-template-areas: 
+    "header header"
+    "carrusel carrusel"
+    "registroPy registroPy"
+    "multimedia multimedia"
+    "footer footer";
+    width: 100%; 
+  }
+  .header{
     font-size: 12px;
   }
+  .button__galeria{
+    font-size: 12px;
+  }
+  .Numslidershow{
+    width: 75%;
+  }
+  /*Se bloquea 3 items de la pagina principal cuando se reduce a 768px*/
   .contenedorlista__img {
     display: none;
   }
@@ -446,15 +465,34 @@ footer {
   }
   .descripcion {
     width: 100%;
-    padding: 30px;
-    margin: 30px;
+    padding: 10px;
+    margin: 20px;
   }
   .registroPy {
-    padding-left: 40px;
+    margin-top: 1em;
+    width: 95%;
+    
   }
-  section.mapa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  #producto{
+    margin-top:10em;
+  }
+  .mapa {
+    
+    margin-top:4em;
+    font-size: 10px;
+    margin-right: 7em;
+    margin-bottom: 20em;
+    
+  }
+  .mapas__img{
+    height: 20%;
+    border: 2px solid black;
+  }
+
+  #historia{
+    font-size: 18px;
+  }
+  footer {
+    font-size: 14px;
   }
 }
