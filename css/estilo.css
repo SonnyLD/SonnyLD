@@ -6,14 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
 /*Se generar el maquetado por medio de GRID*/
 #gridPagina {
   display: grid;
   min-height: 100vh;
+
   grid-template-areas:
     "header header header "
     "carrusel carrusel carrusel "
@@ -39,6 +36,9 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
 main#carrusel {
   grid-area: carrusel;
@@ -101,7 +101,7 @@ main {
   width: 80%;
   right: 15px;
   overflow: hidden;
-  top: 32%;
+  top: 34%;
   position: absolute;
   border-radius: 20px;
   box-shadow: 5px 8px 12px black;
@@ -126,7 +126,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  font-size: 60px;
+  font-size: 3.75em;
 }
 .slidershow__arrows > i:hover {
   cursor: pointer;
@@ -154,6 +154,7 @@ img {
 .button__galeria {
   display: flex;
   justify-content: center;
+  text-decoration: none;
   width: 17%;
   height: 80px;
   border-radius: 20px;
@@ -381,7 +382,7 @@ form {
   font-size: 1rem;
   color: rgb(19, 18, 18);
 }
-.mapas__img{
+.mapas__img {
   margin-top: 4em;
   border-top: 4px solid black;
 }
@@ -431,26 +432,83 @@ footer {
 
   background-image: linear-gradient(to top, #f1b125ec, #f1e3c3ec, #dfd4baec);
 }
+.icons-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block; /*Makes the icons inline block level elements. This will let us animate the transform property.*/
+  font-size: 44px;
+  animation: float 4s ease-in-out infinite; /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
+}
+
+/*
+  The following styles will add linear gradient background to the text then it will clip the text shape into the background.
+  The result is gradient text.
+*/
+.ri-instagram-line {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* This is the first item so no animation delay needed.*/
+}
+
+.ri-facebook-circle-line {
+  color: #1877f2;
+  animation-delay: 0.5s; /* Adds a animation delay of 1 seconds.*/
+}
+
+.ri-whatsapp-line {
+  color: #25d366;
+  animation-delay: 1s; /* Adds a animation delay of 2 seconds.*/
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /*The starting point of the animation is 0.*/
+  }
+  50% {
+    transform: translateY(
+      -25px
+    ); /*The middle point of the animation is -15xp. This will move the element up.*/
+  }
+  100% {
+    transform: translateY(
+      0
+    ); /*The last point of the animation is going back to the starting state of 0.*/
+  }
+}
 /*el media query de todas las paginas. Hay que realizar algunas correcciones*/
 @media screen and (max-width: 768px) {
   #gridPagina {
     display: grid;
     font-size: 12px;
-    grid-template-areas: 
-    "header header"
-    "carrusel carrusel"
-    "registroPy registroPy"
-    "multimedia multimedia"
-    "footer footer";
-    width: 100%; 
+    grid-template-areas:
+      "header header"
+      "carrusel carrusel"
+      "registroPy registroPy"
+      "multimedia multimedia"
+      "footer footer";
+    width: 100%;
   }
-  .header{
+  .header {
     font-size: 12px;
   }
-  .button__galeria{
+  .button__galeria {
     font-size: 12px;
   }
-  .Numslidershow{
+  .Numslidershow {
     width: 75%;
   }
   /*Se bloquea 3 items de la pagina principal cuando se reduce a 768px*/
@@ -471,25 +529,22 @@ footer {
   .registroPy {
     margin-top: 1em;
     width: 95%;
-    
   }
-  #producto{
-    margin-top:10em;
+  #producto {
+    margin-top: 10em;
   }
   .mapa {
-    
-    margin-top:4em;
+    margin-top: 4em;
     font-size: 10px;
     margin-right: 7em;
     margin-bottom: 20em;
-    
   }
-  .mapas__img{
+  .mapas__img {
     height: 20%;
     border: 2px solid black;
   }
 
-  #historia{
+  #historia {
     font-size: 18px;
   }
   footer {
