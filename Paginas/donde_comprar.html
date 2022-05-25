@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donde comprar</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/estilo.css" />
     <link rel="shorcut icon" href="../Imagenes/wood.png" />
     <script
@@ -40,69 +50,86 @@
     <main class="formulario">
       <div>
         <form>
-          <fieldset>
-            <legend>Busca tu local mas cercano donde comprar</legend>
-            <br />
-            <div>
-              <label for="centro">Elige el tipo de centro</label>
-              <select class="boton__centro" name="centro" id="centro">
-                <option value="todos los centros">todos los centros</option>
-                <option value="Punto de venta">Punto de venta</option>
-                <option value="Placacentro">Placacentro</option>
-              </select>
-            </div>
-            <br />
-            <div>
-              <label for="Prov">Elige la Provincia</label>
-              <select class="boton__provincia" name="Prov" id="Provincia">
-                <option value="Todos">Todos</option>
-                <option value="Lima">Lima</option>
-                <option value="Arequipa">Arequipa</option>
-                <option value="Piura">Piura</option>
-                <option value="Cuzco">Cuzco</option>
-                <option value="ICA">ICA</option>
-              </select>
-            </div>
-            <br />
-            <div>
-              <label for="distr">Elige el distrito</label>
-              <select class="boton__elegir" name="distrito" id="distr">
-                <option value="Los Olivos">Los Olivos</option>
-                <option value="Miraflores">Miraflores</option>
-                <option value="Surco">Surco</option>
-                <option value="Jesus Maria">Jesus Maria</option>
-                <option value="Ate">Ate</option>
-              </select>
-            </div>
-            <br />
-            <div>
-              <fieldset>
-                <input
-                  class="boton__enviar"
-                  id="enviar"
-                  type="submit"
-                  value="Enviar"
-                />
-              </fieldset>
-            </div>
-          </fieldset>
+          <legend>Busca tu local mas cercano donde comprar</legend>
+          <br />
+          <div>
+            <label for="centro">Elige el tipo de centro</label>
+            <select class="boton__centro" name="centro" id="centro">
+              <option value="todos los centros">todos los centros</option>
+              <option value="Punto de venta">Punto de venta</option>
+              <option value="Placacentro">Placacentro</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="Prov">Elige la Provincia</label>
+            <select class="boton__provincia" name="Prov" id="Provincia">
+              <option value="Todos">Todos</option>
+              <option value="Lima">Lima</option>
+              <option value="Arequipa">Arequipa</option>
+              <option value="Piura">Piura</option>
+              <option value="Cuzco">Cuzco</option>
+              <option value="ICA">ICA</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="distr">Elige el distrito</label>
+            <select class="boton__elegir" name="distrito" id="distr">
+              <option value="Los Olivos">Los Olivos</option>
+              <option value="Miraflores">Miraflores</option>
+              <option value="Surco">Surco</option>
+              <option value="Jesus Maria">Jesus Maria</option>
+              <option value="Ate">Ate</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <input
+              class="boton__enviar"
+              id="enviar"
+              type="submit"
+              value="Enviar"
+            />
+          </div>
         </form>
       </div>
     </main>
-      <section class="comprar">
-        <div>
-          <img src="../Imagenes/Slide-venta-mayorista-19.jpg" />
+    <section class="comprar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              alt=""
+              src="../Imagenes/Slide-venta-mayorista-19.jpg"
+              class="img-thumbnail"
+            />
+          </div>
         </div>
-      </section>
-    
-    <footer>
-      <h3>Diseño & Melamine 2022 Todos los derechos reservados</h3>
-      <div class="icons-wrapper"></div>
-      <i class="ri-instagram-line icon"></i>
-      <i class="ri-facebook-circle-line icon"></i>
-      <i class="ri-whatsapp-line icon"></i>
-  </div>
+      </div>
+    </section>
 
-  </footer>
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-sm-6 d-flex justify-content-center">
+            <h3 style="font-size: 2vw">
+              Diseño & Melamine 2022 Todos los derechos reservados
+            </h3>
+          </div>
+          <div class="icons-wrapper">
+            <i class="ri-instagram-line icon"></i>
+            <i class="ri-facebook-circle-line icon"></i>
+            <i class="ri-whatsapp-line icon"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
