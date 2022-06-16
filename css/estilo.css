@@ -132,6 +132,9 @@ form {
 .Num {
   text-align: center;
   font-size: 5rem; }
+  .Num:hover {
+    transform: scale(1.1);
+    box-shadow: 13px 15px 37px black; }
 
 .card {
   background-color: rgba(241, 177, 37, 0.925);
@@ -140,6 +143,18 @@ form {
   .card:hover {
     transform: scale(1.1);
     box-shadow: 13px 15px 37px black; }
+
+.imagen1:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black; }
+
+.imagen2:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black; }
+
+.imagen3:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black; }
 
 .video {
   width: 60%;
@@ -229,7 +244,7 @@ form {
     /*The last point of the animation is going back to the starting state of 0.*/ } }
 
 /*el media query de todas las paginas. Hay que realizar algunas correcciones*/
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 412px) {
   .header {
     font-size: 10px; }
   .button__galeria {
